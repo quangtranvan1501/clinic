@@ -1,0 +1,218 @@
+<div>
+  <nz-layout class="layout-wr">
+    <div>
+      <div nz-row class="title-main">
+        <div [routerLink]="'/welcome'">
+          <span
+            nz-icon
+            nzType="arrow-left"
+            nzTheme="outline"
+            class="title-main-icon"
+          ></span>
+        </div>
+        <div class="title-main-content">Danh sách khám</div>
+      </div>
+      <div class="filter">
+        <a
+          nz-dropdown
+          [nzDropdownMenu]="menu"
+          nz-row
+          nzJustify="space-between"
+          nzAlign="bottom"
+        >
+          <div nz-col class="filter-content">Chọn phòng khám</div>
+          <div nz-col class="filter-icon">
+            <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+          </div>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item>1st menu item</li>
+            <li nz-menu-item>2nd menu item</li>
+            <li nz-menu-item>3rd menu item</li>
+            <li nz-menu-item nzDanger>4th danger item</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+      <div nz-row class="input-search">
+        <nz-input-group [nzSuffix]="suffixIconSearch">
+          <input
+            type="text"
+            nz-input
+            placeholder="Tìm kiếm theo tên hoặc SĐT"
+          />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <span nz-icon nzType="search" nzTheme="outline"></span>
+        </ng-template>
+      </div>
+      <div nz-row class="patient-list">
+        <div>
+          <h4 nz-row nz-typography>Danh sách khám bệnh</h4>
+          <div class="patient-state">
+            <nz-badge
+              nzStatus="success"
+              nzText="Khám xong"
+              style="margin-right: 8px"
+            ></nz-badge>
+            <nz-badge
+              nzStatus="warning"
+              nzText="Chờ khám"
+              style="margin-right: 8px"
+            ></nz-badge>
+            <nz-badge
+              nzStatus="processing"
+              nzText="Đang khám"
+              style="margin-right: 8px"
+            ></nz-badge>
+          </div>
+        </div>
+        <div nz-row class="patient-items">
+          <div nz-row class="patient-item">
+            <div nz-col nzSpan="4">12345</div>
+            <div nz-col nzSpan="18" nzJustify="left">
+              <div nz-row class="patient-item-info">
+                <div>
+                  <nz-avatar nzIcon="Contact" [nzSize]="48"></nz-avatar>
+                </div>
+                <div style="margin-left: 8px">
+                  <div>Trần Văn A</div>
+                  <div style="color: #c1c1c1; font-size: 14px">0123456789</div>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="2">
+              <span
+                nz-icon
+                nzType="ellipsis"
+                nzTheme="outline"
+                [nzRotate]="90"
+                style="font-size: 18px"
+              ></span>
+            </div>
+          </div>
+          <div nz-row class="patient-item">
+            <div nz-col nzSpan="4">12345</div>
+            <div nz-col nzSpan="18" nzJustify="left">
+              <div nz-row class="patient-item-info">
+                <div>
+                  <nz-avatar nzIcon="Contact" [nzSize]="48"></nz-avatar>
+                </div>
+                <div style="margin-left: 8px">
+                  <div>Trần Văn A</div>
+                  <div style="color: #c1c1c1; font-size: 14px">0123456789</div>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="2">
+              <span
+                nz-icon
+                nzType="ellipsis"
+                nzTheme="outline"
+                [nzRotate]="90"
+                style="font-size: 18px"
+              ></span>
+            </div>
+          </div>
+          <div nz-row class="patient-item">
+            <div nz-col nzSpan="4">12345</div>
+            <div nz-col nzSpan="18" nzJustify="left">
+              <div nz-row class="patient-item-info">
+                <div>
+                  <nz-avatar nzIcon="Contact" [nzSize]="48"></nz-avatar>
+                </div>
+                <div style="margin-left: 8px">
+                  <div>Trần Văn A</div>
+                  <div style="color: #c1c1c1; font-size: 14px">0123456789</div>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="2">
+              <span
+                nz-icon
+                nzType="ellipsis"
+                nzTheme="outline"
+                [nzRotate]="90"
+                style="font-size: 18px"
+              ></span>
+            </div>
+          </div>
+          <div nz-row class="patient-item">
+            <div nz-col nzSpan="4">12345</div>
+            <div nz-col nzSpan="18" nzJustify="left">
+              <div nz-row class="patient-item-info">
+                <div>
+                  <nz-avatar nzIcon="Contact" [nzSize]="48"></nz-avatar>
+                </div>
+                <div style="margin-left: 8px">
+                  <div>Trần Văn A</div>
+                  <div style="color: #c1c1c1; font-size: 14px">0123456789</div>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="2">
+              <span
+                nz-icon
+                nzType="ellipsis"
+                nzTheme="outline"
+                [nzRotate]="90"
+                style="font-size: 18px"
+              ></span>
+            </div>
+          </div>
+          <div nz-row class="patient-item">
+            <div nz-col nzSpan="4">12345</div>
+            <div nz-col nzSpan="18" nzJustify="left">
+              <div nz-row class="patient-item-info">
+                <div>
+                  <nz-avatar nzIcon="Contact" [nzSize]="48"></nz-avatar>
+                </div>
+                <div style="margin-left: 8px">
+                  <div>Trần Văn A</div>
+                  <div style="color: #c1c1c1; font-size: 14px">0123456789</div>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="2">
+              <span
+                nz-icon
+                nzType="ellipsis"
+                nzTheme="outline"
+                [nzRotate]="90"
+                style="font-size: 18px"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-layout>
+</div>
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <span
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <span
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>

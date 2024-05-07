@@ -1,0 +1,83 @@
+<div class="login-page">
+  <div nz-row nzAlign="middle">
+    <div nz-col class="login-panel">
+      <div class="login-content">
+        <div class="header-logo">
+          <div>
+            <img nz-image width="60%" src="assets/loginAvatar.jpg" alt="logo" />
+          </div>
+        </div>
+        <div class="login-content-main">
+          <div class="login-title">
+            <h5 nz-typography>Đăng nhập HC</h5>
+          </div>
+          <!-- <nz-alert *ngIf="errorMsg" nzType="error" nzShowIcon [nzMessage]="errorMsg"></nz-alert> -->
+          <div class="content-main">
+            <form nz-form class="login-form" (ngSubmit)="submitForm()">
+              <nz-form-item class="form-item">
+                <nz-form-control nzErrorTip="Tên đăng nhập không được để trống">
+                  <nz-input-group class="input-style">
+                    <input
+                      nz-input
+                      class="form-control"
+                      [(ngModel)]="username"
+                      name="username"
+                      type="text"
+                      id="username"
+                      placeholder="Tài khoản"
+                      autofocus
+                    />
+                  </nz-input-group>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item class="form-item">
+                <nz-form-control nzErrorTip="Mật khẩu không được để trống">
+                  <nz-input-group
+                    class="form-control"
+                    [nzSuffix]="suffixTemplate"
+                  >
+                    <input
+                      nz-input
+                      [(ngModel)]="password"
+                      name="password"
+                      [type]="passwordVisible ? 'text' : 'password'"
+                      id="password"
+                      placeholder="Mật khẩu"
+                      autofocus
+                    />
+                  </nz-input-group>
+                  <ng-template #suffixTemplate>
+                    <span
+                      nz-icon
+                      [nzType]="!passwordVisible ? 'eye-invisible' : 'eye'"
+                      (click)="passwordVisible = !passwordVisible"
+                    ></span>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item class="form-item">
+                <button
+                  nz-button
+                  class="button-submit"
+                  type="submit"
+                  nzType="primary"
+                  nzBlock
+                >
+                  Đăng nhập
+                </button>
+              </nz-form-item>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="title-child">
+        <label><a>Bạn quên mật khẩu? </a></label>
+      </div>
+      <div class="title-child">
+        <p>
+          Bạn chưa có tài khoản? <label><a>Đăng ký phòng khám mới?</a></label>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

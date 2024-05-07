@@ -1,0 +1,182 @@
+<div>
+  <nz-layout class="layout-wr">
+    <div>
+      <div nz-row class="title-main">
+        <div [routerLink]="'/welcome'">
+          <span
+            nz-icon
+            nzType="arrow-left"
+            nzTheme="outline"
+            class="title-main-icon"
+          ></span>
+        </div>
+        <div class="title-main-content">Hẹn khám</div>
+      </div>
+      <div>
+        <div nz-row class="list-hearder">
+          <div
+            nz-col
+            nzSpan="8"
+            class="list-option-2"
+            [routerLink]="'/check-up'"
+          >
+            <div>Khám lâm sàn</div>
+          </div>
+          <div
+            nz-col
+            nzSpan="8"
+            class="list-option-1"
+            [routerLink]="'/check-up/service-choose'"
+          >
+            <div>Chỉ định dịch vụ</div>
+          </div>
+          <div
+            nz-col
+            nzSpan="8"
+            class="list-option-2"
+            [routerLink]="'/check-up/prescription'"
+          >
+            <div>Đơn thuốc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tickets">
+      <div nz-row class="tickets-header">
+        <div nz-col nzSpan="12">
+          <div class="tickets-title">Phiếu dịch vụ số 1</div>
+          <div class="tickets-type">Xét nghiệm</div>
+        </div>
+        <div nz-col nzSpan="12">
+          <div class="service-count">Số loại khám</div>
+          <div class="service-cost">Thành tiền: 25.000 VND</div>
+        </div>
+      </div>
+      <div *ngIf="isShowTickets['2']" class="tickets-content tickets-type">
+        <div nz-row class="content-item">
+          <div nz-col nzSpan="15">Xét nghiệm máu</div>
+          <div nz-col nzSpan="9" style="display: flex">
+            Số lần:
+            <div>1</div>
+          </div>
+        </div>
+        <div nz-row class="content-item">
+          <div nz-col nzSpan="15">Xét nghiệm máu</div>
+          <div nz-col nzSpan="9" style="display: flex">
+            Số lần:
+            <div>1</div>
+          </div>
+        </div>
+        <div nz-row class="content-item">
+          <div nz-col nzSpan="15">Xét nghiệm máu</div>
+          <div nz-col nzSpan="9" style="display: flex">
+            Số lần:
+            <div>1</div>
+          </div>
+        </div>
+      </div>
+      <div
+        *ngIf="!isShowTickets['2']"
+        nz-row
+        class="show-tickets"
+        (click)="toggleTicketsContent('2')"
+      >
+        <div>Chi tiết</div>
+        <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+      </div>
+      <div
+        *ngIf="isShowTickets['2']"
+        nz-row
+        class="show-tickets"
+        (click)="toggleTicketsContent('2')"
+      >
+        <div>Ẩn bớt</div>
+        <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+      </div>
+    </div>
+    <div class="tickets">
+      <div nz-row class="tickets-header">
+        <div nz-col nzSpan="12">
+          <div class="tickets-title">Phiếu dịch vụ số 1</div>
+          <div class="tickets-type">Xét nghiệm</div>
+        </div>
+        <div nz-col nzSpan="12">
+          <div class="service-count">Số loại khám</div>
+          <div class="service-cost">Thành tiền: 25.000 VND</div>
+        </div>
+      </div>
+      <div *ngIf="isShowTickets['1']" class="tickets-content tickets-type">
+        <div nz-row class="content-item">
+          <div nz-col nzSpan="15">Xét nghiệm máu</div>
+          <div nz-col nzSpan="9" style="display: flex">
+            Số lần:
+            <div>1</div>
+          </div>
+        </div>
+        <div nz-row class="content-item">
+          <div nz-col nzSpan="15">Xét nghiệm máu</div>
+          <div nz-col nzSpan="9" style="display: flex">
+            Số lần:
+            <div>1</div>
+          </div>
+        </div>
+        <div nz-row class="content-item">
+          <div nz-col nzSpan="15">Xét nghiệm máu</div>
+          <div nz-col nzSpan="9" style="display: flex">
+            Số lần:
+            <div>1</div>
+          </div>
+        </div>
+      </div>
+      <div
+        *ngIf="!isShowTickets['1']"
+        nz-row
+        class="show-tickets"
+        (click)="toggleTicketsContent('1')"
+      >
+        <div>Chi tiết</div>
+        <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+      </div>
+      <div
+        *ngIf="isShowTickets['1']"
+        nz-row
+        class="show-tickets"
+        (click)="toggleTicketsContent('1')"
+      >
+        <div>Ẩn bớt</div>
+        <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+      </div>
+    </div>
+    <div class="add-appointment">
+      <span nz-icon nzType="plus" nzTheme="outline"></span>
+    </div>
+  </nz-layout>
+</div>
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <span
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <span
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>

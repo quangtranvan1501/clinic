@@ -1,0 +1,28 @@
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <span
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <span
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,118 @@
+<div>
+  <nz-layout class="layout-wr">
+    <div>
+      <div nz-row class="title-main">
+        <div [routerLink]="'/welcome'">
+          <span
+            nz-icon
+            nzType="arrow-left"
+            nzTheme="outline"
+            class="title-main-icon"
+          ></span>
+        </div>
+        <div class="title-main-content">Phòng Khám</div>
+      </div>
+      <div class="filter">
+        <a
+          nz-dropdown
+          [nzDropdownMenu]="menu"
+          nz-row
+          nzJustify="space-between"
+          nzAlign="bottom"
+        >
+          <div nz-col class="filter-content">Sắp xếp theo</div>
+          <div nz-col class="filter-icon">
+            Bệnh nhân chờ tăng
+            <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+          </div>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item>1st menu item</li>
+            <li nz-menu-item>2nd menu item</li>
+            <li nz-menu-item>3rd menu item</li>
+            <li nz-menu-item nzDanger>4th danger item</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+      <div class="zoom">
+        <div nz-row class="zoom-item m-3 p-2">
+          <div nz-col nzSpan="7">
+            <img
+              nz-image
+              width="75%"
+              src="assets/zoom.png"
+              alt="Thuốc"
+              class="ml-2"
+            />
+          </div>
+          <div nz-col nzSpan="14" class="zoom-info">
+            <div class="zoom-name">Buồng khám số 1</div>
+            <div
+              class="dortor-name"
+              style="color: #211de8; margin-bottom: 16px"
+            >
+              BS: TS.TranVan A
+            </div>
+            <div class="dortor-name" style="color: #0d5afd">
+              BS: TS.TranVan A
+            </div>
+            <div class="zoom-state">Chờ/Đã khám: 3/12</div>
+          </div>
+        </div>
+        <div nz-row class="zoom-item m-3 p-2">
+          <div nz-col nzSpan="7">
+            <img
+              nz-image
+              width="75%"
+              src="assets/zoom.png"
+              alt="Thuốc"
+              class="ml-2"
+            />
+          </div>
+          <div nz-col nzSpan="14" class="zoom-info m-2">
+            <div class="zoom-name mb-1">Buồng khám số 1</div>
+            <div
+              class="dortor-name mb-2"
+              style="color: #211de8; margin-bottom: 16px"
+            >
+              BS: TS.TranVan A
+            </div>
+            <div class="dortor-name mb-2" style="color: #0d5afd">
+              BS: TS.TranVan A
+            </div>
+            <div class="zoom-state pl-2 pr-2">Chờ/Đã khám: 3/12</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-layout>
+</div>
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <span
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <span
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>

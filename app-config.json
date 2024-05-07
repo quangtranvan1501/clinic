@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Phòng Khám demo3",
+    "headerTitle": "Phòng Khám demo3",
+    "headerColor": "#1843EF",
+    "textColor": "white",
+    "statusBarColor": "#1843EF",
+    "leftButton": "back",
+    "statusBar": "normal",
+    "actionBarHidden": false,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false
+  },
+  "debug": false,
+  "listCSS": ["styles.45483b45db41a763.css"],
+  "listSyncJS": ["main.9fb1f1c2c82a724d.js", "polyfills.db78385906dccf27.js", "runtime.9c97be4155298887.js"],
+  "listAsyncJS": []
+}

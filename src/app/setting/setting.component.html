@@ -1,0 +1,112 @@
+<div>
+  <nz-layout class="layout-wr">
+    <div style="margin-bottom: 40px">
+      <div nz-row class="title-main">
+        <div [routerLink]="'/welcome'">
+          <span
+            nz-icon
+            nzType="arrow-left"
+            nzTheme="outline"
+            class="title-main-icon"
+          ></span>
+        </div>
+        <div class="title-main-content">Cài đặt</div>
+      </div>
+      <div class="setting">
+        <div class="setting-item">
+          <h3 nz-row nz-typography>Cài đặt</h3>
+          <div nz-row>
+            <nz-switch nz-col [(ngModel)]="switchValue"></nz-switch>
+            <h3 nz-col style="padding-left: 10px" nz-typography>
+              Trạng thái khả dụng
+            </h3>
+          </div>
+          <div nz-row>
+            <nz-switch nz-col [(ngModel)]="switchValue2"></nz-switch>
+            <h3 nz-col style="padding-left: 10px" nz-typography>
+              Nhận thông báo
+            </h3>
+          </div>
+          <div nz-row>
+            <nz-switch nz-col [(ngModel)]="switchValue3"></nz-switch>
+            <h3 nz-col style="padding-left: 10px" nz-typography>Chế độ đêm</h3>
+          </div>
+        </div>
+        <div class="setting-item">
+          <h3 nz-row nz-typography>Tài khoản</h3>
+          <div nz-row class="item">
+            <div class="setting-icon" style="background-color: #211de8">
+              <span nz-icon nzType="user" nzTheme="outline"></span>
+            </div>
+            <h3 nz-col class="ml-3" nz-typography>Cập nhật hồ sơ</h3>
+          </div>
+          <div nz-row class="item">
+            <div class="setting-icon" style="background-color: #e4e81d">
+              <span nz-icon nzType="edit" nzTheme="outline"></span>
+            </div>
+            <h3 nz-col class="ml-3" nz-typography>Cập nhật tiểu sử</h3>
+          </div>
+          <div nz-row class="item">
+            <div class="setting-icon" style="background-color: #0d5afd">
+              <span nz-icon nzType="lock" nzTheme="outline"></span>
+            </div>
+            <h3 nz-col class="ml-3" nz-typography>Đổi mật khẩu</h3>
+          </div>
+          <div nz-row class="item">
+            <div class="setting-icon" style="background-color: #1bb62b">
+              <span nz-icon nzType="global" nzTheme="outline"></span>
+            </div>
+            <h3 nz-col class="ml-3" nz-typography>Ngôn ngữ</h3>
+          </div>
+          <div nz-row class="item">
+            <div class="setting-icon" style="background-color: #e44d68">
+              <span
+                nz-icon
+                nzType="safety-certificate"
+                nzTheme="outline"
+              ></span>
+            </div>
+            <h3 nz-col class="ml-3" nz-typography>Chính sách quyền riêng tư</h3>
+          </div>
+        </div>
+        <div class="setting-item">
+          <h3 nz-row nz-typography>Đăng xuất</h3>
+          <div nz-row class="item" (click)="logOut()">
+            <div class="setting-icon" style="background-color: #e44d68">
+              <span nz-icon nzType="logout" nzTheme="outline"></span>
+            </div>
+            <h3 nz-col nz-typography>Đăng xuất</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-layout>
+</div>
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <span
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <span
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>

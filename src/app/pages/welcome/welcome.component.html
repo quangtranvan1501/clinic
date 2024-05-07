@@ -1,0 +1,251 @@
+<div class="layout-wr">
+  <nz-layout>
+    <div nz-row>
+      <div nz-col nzSpan="24">
+        <div>
+          <div class="home-header">
+            <div class="home-lert" nz-col nzFlex="7">
+              <div nz-row>
+                <button
+                  nz-button
+                  nzType="text"
+                  class="topbar-btn"
+                  nz-col
+                  nzFlex="2"
+                >
+                  <nz-avatar
+                    nzText="TV"
+                    [nzSize]="52"
+                    class="topbar-avatar"
+                  ></nz-avatar>
+                </button>
+                <div class="header-username" nz-col nzFlex="8">
+                  <p>Xin chào bác sĩ,</p>
+                  <h3 nz-typography>Tran Văn ABC</h3>
+                </div>
+              </div>
+            </div>
+            <div class="home-right" nz-col nzFlex="3">
+              <button
+                nz-button
+                nzType="text"
+                class="topbar-btn topbar-btn-menu"
+              >
+                <nz-badge
+                  [nzCount]="2"
+                  [nzStyle]="{ backgroundColor: '#3F8ACD' }"
+                  nzSize="small"
+                >
+                  <span
+                    nz-icon
+                    nzType="bell"
+                    nzTheme="outline"
+                    class="iconRinger"
+                  ></span>
+                </nz-badge>
+              </button>
+            </div>
+          </div>
+          <div class="introduction">
+            <div nz-row nzDisplay="flex">
+              <div nz-col class="content-intro" nzFlex="9">
+                <h1 nz-typography>Lịch hẹn khám hôm nay:</h1>
+                <nz-badge
+                  nzColor="#E9B01D"
+                  nzText="Đã có 3 lịch hẹn khám"
+                  class="number-cadenlar"
+                ></nz-badge>
+              </div>
+              <div nz-col class="icon-wapper" nzFlex="1">
+                <span
+                  nz-icon
+                  nzType="arrow-right"
+                  nzTheme="outline"
+                  class="custom-icon"
+                ></span>
+              </div>
+            </div>
+            <div class="search-intro">
+              <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" nz-input placeholder="Tìm kiếm" />
+              </nz-input-group>
+              <ng-template #suffixIconSearch>
+                <i nz-icon nzType="Search" nzSize="md"></i>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div nz-row>
+      <div nz-col nzSpan="24">
+        <div class="list-feature">
+          <div>
+            <h3 nz-typography>Tính năng chính</h3>
+            <div class="feature-items" nz-row [nzGutter]="[16, 24]">
+              <div class="feature-item" class="gutter-row" nz-col [nzSpan]="6" [routerLink]="'/medical-apppointment'">
+                <div style="color: #0063cb">
+                  <span
+                    nz-icon
+                    nzType="calendar"
+                    nzTheme="fill"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Hẹn khám</p>
+              </div>
+              <div
+                class="feature-item"
+                class="gutter-row"
+                nz-col
+                [nzSpan]="6"
+                [routerLink]="'/check-up'"
+              >
+                <div style="color: #fe9901">
+                  <span
+                    nz-icon
+                    nzType="reconciliation"
+                    nzTheme="outline"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Khám Bệnh</p>
+              </div>
+              <div
+                class="feature-item"
+                class="gutter-row"
+                nz-col
+                [nzSpan]="6"
+                [routerLink]="'/patients'"
+              >
+                <div style="color: #80b4fb">
+                  <span
+                    nz-icon
+                    nzType="solution"
+                    nzTheme="outline"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Bệnh nhân</p>
+              </div>
+              <div
+                class="feature-item"
+                class="gutter-row"
+                nz-col
+                [nzSpan]="6"
+                [routerLink]="'/medicine-warehouse'"
+              >
+                <div style="color: #ed4c58">
+                  <span
+                    nz-icon
+                    nzType="medicine-box"
+                    nzTheme="fill"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Kho thuốc</p>
+              </div>
+              <div
+                class="feature-item"
+                class="gutter-row"
+                nz-col
+                [nzSpan]="6"
+                [routerLink]="'/medical-office'"
+              >
+                <div style="color: #ffd301">
+                  <span
+                    nz-icon
+                    nzType="bar-chart"
+                    nzTheme="outline"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Thống kê</p>
+              </div>
+              <div
+                class="feature-item"
+                class="gutter-row"
+                nz-col
+                [nzSpan]="6"
+                [routerLink]="'/patient-list'"
+              >
+                <div style="color: #c59191">
+                  <span
+                    nz-icon
+                    nzType="credit-card"
+                    nzTheme="fill"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Thanh toán</p>
+              </div>
+              <div class="feature-item" class="gutter-row" nz-col [nzSpan]="6">
+                <div style="color: #285680">
+                  <span
+                    nz-icon
+                    nzType="robot"
+                    nzTheme="outline"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Trợ lý ảo</p>
+              </div>
+              <div class="feature-item" class="gutter-row" nz-col [nzSpan]="6">
+                <div style="color: #c1a306">
+                  <span
+                    nz-icon
+                    nzType="customer-service"
+                    nzTheme="outline"
+                    class="feature-item-icon"
+                  ></span>
+                </div>
+                <p class="icon-title">Hỗ trợ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div nz-row>
+      <div class="slide">
+        <nz-carousel nzAutoPlay>
+          <div
+            nz-carousel-content
+            *ngFor="let image of images"
+            class="img-slide"
+          >
+            <img width="60%" [src]="image" alt="Slide" />
+          </div>
+        </nz-carousel>
+      </div>
+    </div>
+  </nz-layout>
+</div>
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <i
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></i>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <i
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></i>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>

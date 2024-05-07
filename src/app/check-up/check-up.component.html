@@ -1,0 +1,271 @@
+<div>
+  <nz-layout class="layout-wr">
+    <div>
+      <div nz-row class="title-main">
+        <div [routerLink]="'/welcome'">
+          <span
+            nz-icon
+            nzType="arrow-left"
+            nzTheme="outline"
+            class="title-main-icon"
+          ></span>
+        </div>
+        <div class="title-main-content">Hẹn khám</div>
+      </div>
+      <div>
+        <div nz-row class="list-hearder">
+          <div nz-col nzSpan="8" class="list-option-1">
+            <div>Khám lâm sàn</div>
+          </div>
+          <div
+            nz-col
+            nzSpan="8"
+            class="list-option-2"
+            [routerLink]="'/check-up/service-choose'"
+          >
+            <div>Chỉ định dịch vụ</div>
+          </div>
+          <div
+            nz-col
+            nzSpan="8"
+            class="list-option-2"
+            [routerLink]="'/check-up/prescription'"
+          >
+            <div>Đơn thuốc</div>
+          </div>
+        </div>
+      </div>
+      <div class="tickets-1">
+        <div nz-row>
+          <div nz-col nzSpan="10" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Chọn mẫu</div>
+          </div>
+          <div nz-col nzSpan="10" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Tên mẫu</div>
+          </div>
+          <div nz-col nzSpan="2">
+            <span
+              nz-icon
+              nzType="file-add"
+              nzTheme="fill"
+              style="
+                color: rgba(13, 90, 253, 1);
+                font-size: 28px;
+                margin-left: 8px;
+              "
+            ></span>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="3" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Kg</div>
+          </div>
+          <div nz-col nzSpan="3" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">°C</div>
+          </div>
+          <div nz-col nzSpan="16" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              placeholder="Lý do khám"
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Lý do khám</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="10" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Chuẩn đoán ban đầu</div>
+          </div>
+          <div nz-col nzSpan="12" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="10" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Bệnh phụ</div>
+          </div>
+          <div nz-col nzSpan="12" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Hướng xử lý</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="11" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Xử trí</div>
+          </div>
+          <div nz-col nzSpan="10" class="input-wap">
+            <!-- <input class="input-content" nz-input  [(ngModel)]="value" /> -->
+            <nz-date-picker class="input-content"></nz-date-picker>
+            <div class="input-title">Ngày hẹn</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+            />
+            <div class="input-title">Lời dặn bác sỹ</div>
+          </div>
+        </div>
+      </div>
+      <div class="tickets-1">
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+              nzSize="large"
+            />
+            <div class="input-title titleLG">Bệnh sử</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+              nzSize="large"
+            />
+            <div class="input-title titleLG">Tiền sử</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+              nzSize="large"
+            />
+            <div class="input-title titleLG">Khám toàn thân</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+              nzSize="large"
+            />
+            <div class="input-title titleLG">Khám bộ phận</div>
+          </div>
+        </div>
+        <div nz-row>
+          <div nz-col nzSpan="23" class="input-wap">
+            <input
+              class="input-content"
+              nz-input
+              [(ngModel)]="value"
+              type="number"
+              nzSize="large"
+            />
+            <div class="input-title titleLG">Tóm tắt kết quả CLS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div></div>
+  </nz-layout>
+</div>
+<header nz-row>
+  <div nz-row [nzGutter]="24" class="header-wapper">
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/welcome'">
+      <span
+        nz-icon
+        nzType="home"
+        nzTheme="fill"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <span
+        nz-icon
+        nzType="bars"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8" [routerLink]="'/setting'">
+      <span
+        nz-icon
+        nzType="user"
+        nzTheme="outline"
+        class="header-item-icon"
+      ></span>
+    </div>
+  </div>
+</header>
